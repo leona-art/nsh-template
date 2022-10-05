@@ -8,8 +8,7 @@ services:
       - "6007:6006"
     volumes:
       - ./src:/app
-      # - /etc/passwd:/etc/passwd:ro
-      # - /etc/group:/etc/group:ro
-    # command: sh -c "npm run dev"
-    # command: npm run dev
-    tty: true
+      - /etc/passwd:/etc/passwd:ro
+      - /etc/group:/etc/group:ro
+    command: sh -c "npm run dev"
+    # tty: true
