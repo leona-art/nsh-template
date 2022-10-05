@@ -4,8 +4,8 @@ module.exports = {
         {
           type: "select",
           name: "type",
-          message: "components or page?",
-          choices: ["components", "page"],
+          message: "component or page?",
+          choices: ["component", "page"],
         },
         {
             type:"input",
@@ -22,7 +22,7 @@ module.exports = {
         const { dir, name,type } = answers;
         const componentName=name[0].toUpperCase()+name.slice(1)
         return { 
-            type,
+            type:`${type}s`,
             dir:`${dir}${dir.slice(-1)==='/'?'':'/'}`,
             name,
             componentName 
